@@ -6,12 +6,15 @@ var ano = data.getFullYear()
 //var dataAtual = dia + '/' + mes + '/' + ano
 var dataAtual = ano + '-' + mes + '-' + dia
 
+var res = window.document.querySelector('div#verificou')
 
 // Pega o campo de texto
 var texto = window.document.getElementById('verificou')
 
 //Pega o campo de imagem
 var img = window.document.getElementById('img')
+// var img = window.document.createElement('img') // cria a tag img dinamicamente
+// img.setAttribute('id', 'foto')
 
 function verifica() {
 
@@ -26,27 +29,36 @@ function verifica() {
 
     if(sexo.value == 'Homem') {
         if(ano > 50 ){
+            //img.setAttribute('src', '_fotos/foto-idoso-m.png')
             img.src = '_fotos/foto-idoso-m.png'
         } else if (ano > 30 && ano <= 50 ) {
+            //img.setAttribute('src', '_fotos/foto-adulto-m.png')
             img.src = '_fotos/foto-adulto-m.png'
             
         }else if(ano >= 10 && ano <= 30) {
+            //img.setAttribute('src', '_fotos/foto-jovem-m.png')
             img.src = '_fotos/foto-jovem-m.png'
         } else {
+            //img.setAttribute('src', '_fotos/foto-bebe-m.png')
             img.src = '_fotos/foto-bebe-m.png'
         }
     } else if(sexo.value == 'Mulher') {
         if(ano > 50 ){
+            //img.setAttribute('src', '_fotos/foto-idoso-f.png')
             img.src = '_fotos/foto-idoso-f.png'
         } else if (ano > 30 && ano <= 50 ) {
+            //img.setAttribute('src', '_fotos/foto-adulto-f.png')
             img.src = '_fotos/foto-adulto-f.png'
         }else if(ano >= 10 && ano <= 30) {
+            //img.setAttribute('src', '_fotos/foto-jovem-f.png')
             img.src = '_fotos/foto-jovem-f.png'
         } else {
+            //img.setAttribute('src', '_fotos/foto-bebe-f.png')
             img.src = '_fotos/foto-bebe-f.png'
         }
    }
     texto.innerHTML = `Detectamos ${sexo.value} com ${ano} anos!`
+    //res.appendChild(img) // faz a imagem aparecer
     
 }
 
@@ -61,12 +73,16 @@ function calcularIdade(dataDigitada) {
     var anoAtual = b.substr(0, 4)
     var mesAtual = b.substr(5,7)
     var diaAtual = b.substr(8,10)
-    
 
-    if( (anoDigitado - anoAtual) >= 0) {
-        return (anoDigitado - anoAtual)
+    if(anoDigitado.length == 0 || anoDigitado > anoAtual) {
+        window.alert(`[ERRO] Verifique os dados e tente novamente`)
     } else {
-        return (anoAtual - anoDigitado)
+
+        if( (anoDigitado - anoAtual) >= 0) {
+            return (anoDigitado - anoAtual)
+        } else {
+            return (anoAtual - anoDigitado)
+        }
     }
 
 }
