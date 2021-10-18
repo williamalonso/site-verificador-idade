@@ -12,11 +12,14 @@
     <section>
         <label for="ano">Ano de nascimento:</label> <input type="date" value="idade" id="ano"><br>
         <label for="sexo">Sexo:</label>
-            <input type="radio" id="masc" name="sexo" value="Homem"> masculino
-            <input type="radio" id="fem" name="sexo" value="Mulher"> feminino <br>
+            <input type="radio" id="masc" name="sexo" value="Homem"> <label for="masc">masculino</label>
+            <input type="radio" id="fem" name="sexo" value="Mulher"> <label for="fem">feminino</label> <br>
         <input type="submit" value="Verificar" onclick="verifica()">
         <div id="verificou">
             Aqui entra o resultado
+        </div>
+        <div id="imagem">
+            <img id="img" src="" alt="Foto da pessoa">
         </div>
     </section>
     <footer>&copy; CursoemVideo</footer>
