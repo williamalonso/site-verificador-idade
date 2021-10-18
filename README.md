@@ -3,7 +3,7 @@
     </h1>
 
 <div align="center">
-  <img src="https://github.com/williamalonso/site-verificador-idade/tree/master/_fotos/home.png" alt"Verificador de Idade" title=" Verificador de Idade" width="600" />
+  <img src="https://github.com/williamalonso/site-verificador-idade/blob/master/_fotos/home.png" alt"Verificador de Idade" title=" Verificador de Idade" width="600" />
   
 
 ---
@@ -12,7 +12,7 @@
 
 
 
-### 🤔 Sobre o controlador?
+### 🤔 Sobre o verificador?
 
 É um pequeno exercício feito para calcular a idade de acordo com o ano digitado. Aparecerá uma mensagem com a idade e com uma imagem.
 
