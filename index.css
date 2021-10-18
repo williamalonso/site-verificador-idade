@@ -1,0 +1,66 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: rgb(38, 146, 150);
+    font: normal 15pt Arial;
+}
+.bodyheader {
+    text-align: center;
+    color: white;
+}
+header {
+    color: white;
+    text-align: center;
+}
+section {
+    text-align: center;
+    margin: auto;
+    padding: 15px;
+    background-color: white;
+    border-radius: 10px;
+    width: 500px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.267);
+}
+#masc {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#verificou {
+    margin-top: 20px;
+}
+footer {
+    color: white;
+    text-align: center;
+    font-style: italic;
+    padding-top: 10px;
+}
+#msg {
+    padding: 7px;
+}
+#img {
+    width: 250px;
+}
+
+@media (max-width: 290px) {
+    section {
+        text-align: center;
+        margin: auto;
+        padding: 15px;
+        background-color: white;
+        border-radius: 10px;
+        width: 100px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.267);
+    }
+}
+@media screen and (max-width: 650px) {
+    section {
+        text-align: center;
+        margin: auto;
+        padding: 15px;
+        background-color: white;
+        border-radius: 10px;
+        width: 350px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.267);
+    }
+}
